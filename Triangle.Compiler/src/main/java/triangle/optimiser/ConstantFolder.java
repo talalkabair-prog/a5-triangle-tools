@@ -453,6 +453,8 @@ public class ConstantFolder implements ActualParameterVisitor<Void, AbstractSynt
 
 	@Override
 	public AbstractSyntaxTree visitCallCommand(CallCommand ast, Void arg) {
+		ast.I.visit(this);
+        ast.APS.visit(this);
 		return null;
 	}
 
